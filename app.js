@@ -3,6 +3,9 @@ const cors = require('cors');
 require('dotenv').config();
 var path = require('path');
 var cookieParser = require('cookie-parser');
+const {connect} = require('./lib/utils/mongo_root');
+connect();
+
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
